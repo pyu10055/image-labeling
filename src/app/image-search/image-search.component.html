@@ -1,0 +1,20 @@
+<div class="form-inline form-group mb-2">
+  <input class="form-control" #searchTerm type="text" placeholder="Search Image">
+  <button (click)="search(searchTerm.value)" class="btn btn-primary">Search</button>
+</div>
+<ul class="list-group">
+  <li class="list-group-item justify-content-between align-items-center" *ngFor="let item of results; index as i">
+    <div class="row">
+      <div class="col">
+        <img crossorigin="anonymous" src="{{item.link}}" width="224" height="224" (error)="hideImage($event)" (load)="predict(i, $event)"
+          id="{{i}}">
+      </div>
+      <div class="col">
+        <label *ngFor="let k of item.topK" class="badge badge-pill badge-secondary">
+          {{k.label}}
+          <label class="badge badge-light">{{k.value.toFixed(3)}}</label>
+        </label>
+      </div>
+    </div>
+  </li>
+</ul>
