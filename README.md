@@ -1,6 +1,6 @@
 # TensorFlow.js Image Labeling App
 This project uses Google Custom Search API for image seraching, and
-[TensorFlow.js](https://js.tensorflow.js) for image recognition.
+[TensorFlow.js](https://js.tensorflow.org) for image recognition.
 
 ## Setup Google API key
 
