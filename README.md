@@ -19,3 +19,7 @@ export const environment = {
 ## Development server
 
 Run `ng serve --env=local` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+
+##Note
+Due to the cross domain restriction, many of the image cannot be displayed by canvas, just use any search term if you see no results shown up.
