@@ -18,7 +18,7 @@ export class ImageSearchComponent implements OnInit {
     'Accept': 'q=0.8;application/json;q=0.9'
   });
   private mobileNet: MobileNet;
-  private results: any;
+  results: any;
 
   constructor(private httpClient: HttpClient) {}
 
@@ -27,7 +27,7 @@ export class ImageSearchComponent implements OnInit {
     await this.mobileNet.load();
   }
 
-  search(query, options) {
+  search(query, options = {}) {
     const url = `${this.endpoint}/customsearch/v1`;
     this.httpClient.get(url, {params: this.buildQuery(query, options)})
         .subscribe((next: any) => {
