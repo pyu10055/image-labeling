@@ -1,5 +1,5 @@
 <div class="form-inline form-group mb-2">
-  <input class="form-control" #searchTerm type="text" placeholder="Search Image">
+  <input class="form-control" #searchTerm type="text" placeholder="Search Image" (keyup.enter)="search(searchTerm.value)">
   <button (click)="search(searchTerm.value)" class="btn btn-primary">Search</button>
 </div>
 <ul class="list-group">
